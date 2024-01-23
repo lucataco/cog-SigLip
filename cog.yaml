@@ -1,0 +1,14 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  gpu: true
+  python_version: "3.11"
+  python_packages:
+    - "torch==2.0.1"
+    - "sentencepiece"
+    - "transformers==4.37.0"
+    - "Pillow"
+    - "protobuf"
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
